@@ -1,14 +1,16 @@
 let value1 = "";
 let value2 = "";
-let operator;
+let operator = "";
 
-const buttons = document.querySelectorAll(".numButton");
+const operatorButtons = document.querySelector(".operator");
+const numButtons = document.querySelectorAll(".numButton");
 const display = document.getElementById("display");
 
-const clearButton = document.getElementById(".clear")
-clearButton.addEventListener("click", () => {display.value = ""})
+const clearButton = document.getElementById("clear")
+clearButton.addEventListener("click", () => {display.value = "", value1 = ""})
 
-buttons.forEach(button => {
+
+numButtons.forEach(button => {
     button.addEventListener("click", () => {
         const text = button.textContent;
 
@@ -23,15 +25,15 @@ buttons.forEach(button => {
         }});
     });
 
-    buttons.forEach(button => {button.addEventListener("click", () => {
-        const text = button.textContent;
+//     buttons.forEach(button => {button.addEventListener("click", () => {
+//         const text = button.textContent;
 
-        if(text === '+' || text === '-' || text === '*' || text === '/')
-        {
-            operator += text;
-            display.value = value1 + " " + operator;
-        }
-})});
+//         if(text === '+' || text === '-' || text === '*' || text === '/')
+//         {
+//             operator += text;
+//             display.value = value1 + " " + operator;
+//         }
+// })});
 
 
     
