@@ -23,7 +23,6 @@ equalsButton.addEventListener("click", () => {
      value2 = "";
      value1 = result;
      clicked = true;
-
 })
 
 numButtons.forEach(button => {
